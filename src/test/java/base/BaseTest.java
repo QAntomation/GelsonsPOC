@@ -5,7 +5,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
-public class BaseTest extends WebDriverManager {
+public class BaseTest extends PageObjects {
 
     @BeforeTest
     @Parameters(("OperativeSystem"))

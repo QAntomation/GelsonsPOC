@@ -6,7 +6,7 @@
 
     <test name="Test">
         <classes>
-            <class name="userInterface.TestClass"/>
+            <class name="UITests.TestClass"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

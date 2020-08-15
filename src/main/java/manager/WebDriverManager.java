@@ -2,7 +2,6 @@ package manager;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.Parameters;
 
 import java.util.concurrent.TimeUnit;
 
@@ -27,4 +26,10 @@ public class WebDriverManager {
     public void driverQuit(){
         driver.quit();
     }
+
+    public WebDriver getDriver(){
+        return driver;
+    }
+
+
 }

@@ -1,4 +1,4 @@
-package userInterface;
+package UITests;
 
 import base.BaseTest;
 import org.testng.annotations.Parameters;
@@ -10,5 +10,6 @@ public class TestClass extends BaseTest {
     @Parameters(("url"))
     public void openCatering(String url) {
         openUrl(url);
+        cateringStoreModalPage.clickOnSelectAStoreButton();
     }
 }
