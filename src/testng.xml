@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite" parallel="false">
+
+    <parameter name="OperativeSystem" value="macOS"></parameter>
+    <parameter name="url" value="https://gelsons-staging.sunnybyte.review/catering"></parameter>
+
     <test name="Test">
         <classes>
             <class name="userInterface.TestClass"/>
