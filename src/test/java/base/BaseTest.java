@@ -1,6 +1,5 @@
 package base;
 
-import manager.WebDriverManager;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
@@ -8,9 +7,10 @@ import org.testng.annotations.Parameters;
 public class BaseTest extends PageObjects {
 
     @BeforeTest
-    @Parameters(("OperativeSystem"))
-    public void beforeClass(String OS) {
+    @Parameters({"OperativeSystem", "url"})
+    public void beforeClass(String OS, String url) {
         driverSetUp(OS);
+        openUrl(url);
     }
 
     @AfterTest
