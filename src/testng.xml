@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite" parallel="false">
 
-    <parameter name="OperativeSystem" value="macOS"></parameter>
+    <parameter name="OperativeSystem" value="windows"></parameter>
     <parameter name="url" value="https://gelsons-staging.sunnybyte.review/catering"></parameter>
 
     <test name="Test">

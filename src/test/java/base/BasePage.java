@@ -10,8 +10,14 @@ public class BasePage extends PageObjects {
         this.driver = driver;
     }
 
-    public void clickButton(WebElement element){
+    public void clickButton(WebElement element) {
         element.click();
+    }
+    public void typeElements(WebElement element) {
+        element.sendKeys();
+    }
+    public void isDisplayed(WebElement element) {
+        element.isDisplayed();
     }
 
 }

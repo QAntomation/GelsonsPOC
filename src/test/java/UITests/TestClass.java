@@ -10,5 +10,6 @@ public class TestClass extends BaseTest {
     public void openCatering() {
         cateringStoreModalPage = new CateringStoreModalPage(getDriver());
         cateringStoreModalPage.clickOnSelectAStoreModalButton();
+
     }
 }
