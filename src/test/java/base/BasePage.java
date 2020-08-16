@@ -3,7 +3,7 @@ package base;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class BasePage extends PageObjects {
+public class BasePage extends indexPages {
 
     public BasePage(WebDriver driver)
     {

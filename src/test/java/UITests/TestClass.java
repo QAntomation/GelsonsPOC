@@ -2,14 +2,14 @@ package UITests;
 
 import base.BaseTest;
 import org.testng.annotations.Test;
-import pages.CateringStoreModalPage;
+import pages.StorePickupModalPage;
 
 public class TestClass extends BaseTest {
 
     @Test
     public void openCatering() {
-        cateringStoreModalPage = new CateringStoreModalPage(getDriver());
-        cateringStoreModalPage.clickOnSelectAStoreModalButton();
+        storePickupModalPage = new StorePickupModalPage(getDriver());
+        storePickupModalPage.clickOnSelectAStoreModalButton();
 
     }
 }

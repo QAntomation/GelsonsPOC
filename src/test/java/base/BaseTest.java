@@ -4,7 +4,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
-public class BaseTest extends PageObjects {
+public class BaseTest extends indexPages {
 
     @BeforeTest
     @Parameters({"OperativeSystem", "url"})
