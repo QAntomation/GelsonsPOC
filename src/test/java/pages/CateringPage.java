@@ -9,10 +9,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class CateringPage extends BasePage {
+
     private String superMarketLocator= "//span[contains(text(),'%s')]";
 
     @FindBy(xpath="(//button[@type='submit'][contains(.,'Add')])[1]")
-    WebElement addBtnlocator;
+    WebElement addLocator;
 
     public CateringPage(WebDriver driver) {
         super(driver);
@@ -29,7 +30,7 @@ public class CateringPage extends BasePage {
         dropQuantity.selectByIndex(num);
     }
     public ShoppingCardModalPage clickOnAddBtn( ) {
-        clickButton(addBtnlocator);
+        clickButton(addLocator);
         return new  ShoppingCardModalPage(getDriver());
     }
 }

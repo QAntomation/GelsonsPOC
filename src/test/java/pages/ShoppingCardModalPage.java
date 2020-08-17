@@ -14,13 +14,16 @@ public class ShoppingCardModalPage extends BasePage {
     WebElement checkoutLocator;
     @FindBy(xpath="(//h5[contains(.,'Crostini: Mozzarella, Tomato, and Basil')])[2]")
     WebElement sauce;
+    @FindBy(css="cart-subtotal")
+    WebElement subtotalLocator;
 
     public ShoppingCardModalPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
     }
-    public void clickOnCheckout ()  {
+    public PlaceYourOrderPage clickOnCheckout ()  {
         clickButton(checkoutLocator);
+        return  new PlaceYourOrderPage(getDriver());
     }
     public boolean sauceIsDisplayed(){
         isDisplayed(sauce);

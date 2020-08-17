@@ -9,7 +9,7 @@ import org.openqa.selenium.JavascriptExecutor;
 
 public class BasePage extends indexPages {
 
-    WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+   // WebDriverWait wait = new WebDriverWait(getDriver(), 20);
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
@@ -30,7 +30,7 @@ public class BasePage extends indexPages {
     public void getText(WebElement element)  {
         element.getText();
     }
-
+/*
     public void waitForElementToLoad(WebElement element){
         wait.until(ExpectedConditions.visibilityOf(element));
     }
@@ -42,5 +42,5 @@ public class BasePage extends indexPages {
             }
         };
         wait.until(pageLoadCondition);
-    }
+    }*/
 }
