@@ -9,8 +9,6 @@ import org.openqa.selenium.JavascriptExecutor;
 
 public class BasePage extends indexPages {
 
-    WebDriverWait wait = new WebDriverWait(getDriver(), 20);
-
     public BasePage(WebDriver driver) {
         this.driver = driver;
     }
@@ -32,6 +30,7 @@ public class BasePage extends indexPages {
     }
 
     public void waitForElementToLoad(WebElement element){
+    WebDriverWait wait = new WebDriverWait(getDriver(), 20);
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
@@ -41,6 +40,7 @@ public class BasePage extends indexPages {
                 return ((JavascriptExecutor)driver).executeScript("return document.readyState").equals("complete");
             }
         };
+        WebDriverWait wait = new WebDriverWait(getDriver(), 20);
         wait.until(pageLoadCondition);
     }
 }
