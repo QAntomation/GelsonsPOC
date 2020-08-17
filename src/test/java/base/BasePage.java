@@ -9,7 +9,7 @@ public class BasePage extends indexPages {
         this.driver = driver;
     }
 
-    public void clickButton(WebElement element) {
+    public void clickButton(WebElement element){
         element.click();
     }
 
@@ -24,5 +24,4 @@ public class BasePage extends indexPages {
     public void getText(WebElement element)  {
         element.getText();
     }
-
 }

@@ -35,7 +35,7 @@ public class StorePickupModalPage extends BasePage {
 
     public CateringPage clickOnNextBtn() {
         clickButton(nextBtnLocator);
-        return  new CateringPage(driver);
+        return  new CateringPage(getDriver());
     }
 
 
