@@ -24,7 +24,9 @@ public class StorePickupModalPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    public void clickOnSelectAStoreModalButton() { clickButton(selectAStoreButtonLocator); }
+    public void clickOnSelectAStoreModalButton() {
+        waitForElementToLoad(selectAStoreButtonLocator);
+        clickButton(selectAStoreButtonLocator); }
 
     public void clickOnAnyStore(String selectSuperMarket) {
         String fullXpath = String.format(selectSuperMarketLocator, selectSuperMarket);
@@ -35,7 +37,7 @@ public class StorePickupModalPage extends BasePage {
 
     public CateringPage clickOnNextBtn() {
         clickButton(nextBtnLocator);
-        return  new CateringPage(driver);
+        return  new CateringPage(getDriver());
     }
 
 
