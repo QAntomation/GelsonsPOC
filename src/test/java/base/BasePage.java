@@ -30,7 +30,7 @@ public class BasePage extends indexPages {
     }
 
     public void waitForElementToLoad(WebElement element){
-        WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+        WebDriverWait wait = new WebDriverWait(getDriver(), 15);
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
@@ -40,7 +40,7 @@ public class BasePage extends indexPages {
                 return ((JavascriptExecutor)driver).executeScript("return document.readyState").equals("complete");
             }
         };
-        WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+        WebDriverWait wait = new WebDriverWait(getDriver(), 15);
         wait.until(pageLoadCondition);
     }
 }
