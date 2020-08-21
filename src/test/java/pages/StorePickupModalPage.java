@@ -8,9 +8,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class StorePickupModalPage extends BasePage {
+
+    public StorePickupModalPage(WebDriver driver) {
+        super(driver);
+        PageFactory.initElements(driver, this);
+    }
+
     private String selectSuperMarketLocator ="//h5[contains(text(),'%s')]";
 
-    @FindBy(xpath="//a[contains(text(),'Click here to select a store')]")
+    @FindBy(xpath="//a[@class='btn btn-secondary']")
     WebElement selectAStoreButtonLocator;
 
     @FindBy(xpath="//a[contains(text(),'Edit')]")
@@ -19,16 +25,11 @@ public class StorePickupModalPage extends BasePage {
     @FindBy(xpath="//button[contains(text(),'Next')]")
     WebElement nextBtnLocator;
 
-    public StorePickupModalPage(WebDriver driver) {
-        super(driver);
-        PageFactory.initElements(driver, this);
-    }
-
     public void clickOnSelectAStoreModalButton() {
-        waitForElementToLoad(selectAStoreButtonLocator);
         clickButton(selectAStoreButtonLocator); }
 
     public void clickOnAnyStore(String selectSuperMarket) {
+
         String fullXpath = String.format(selectSuperMarketLocator, selectSuperMarket);
         clickButton(getDriver().findElement(By.xpath(fullXpath)));
     }
